@@ -1,0 +1,4 @@
+hss-service/src/main/resources/spml-config.yml
+hss-service/src/main/resources/logback-spring.xml
+hss-service/src/main/resources/hss-config.yml
+hss-service/src/main/resources/application.yml
