@@ -1,0 +1,78 @@
+spml:
+    ns2_rrefix                      : ns2
+    spml_prefix                     : spml
+    spml_namespace                  : urn:siemens:names:prov:gw:SPML:2:0
+    xsi_rrefix                      : xsi
+    xsi_namespace                   : http://www.w3.org/2001/XMLSchema-instance
+    subscriber_ns_tag               : SUBSCRIBER_NS
+    subscriber_version_tag          : SUBSCRIBER_VERSION
+    
+    object_class                    : Subscriber
+    default_language                : en_us
+    public_identity_type            : publicUserId/publicUserId
+    private_identity_type           : privateUserId/privateUserId
+    new_generated                   : true
+    
+    return_resulting_object         : none
+    subscriber_type                 : subscriber:Subscriber
+    subscriber_id_length            : 32
+    irs_suffix_length               : 16
+    delete_scope                    : all
+    delete_scope_string             : deleteScope
+    private_identity_search_name    : impi
+    public_identity_search_name     : impu
+   
+    cdata                           : "<!\\[CDATA\\[([^]]+)\\]\\]>"
+    spml_ext                        : "spml:"
+    ns2_subscriber                  : ns2:Subscriber
+    xmlns_xsi                       : xmlns:xsi
+    xmlns_subscriber                : xmlns:subscriber
+    
+    search_status                   : searchStatus
+    result                          : result
+    request_id                      : requestID
+    execution_time                  : executionTime
+    subscribed_media_profile_id     : subscribedMediaProfileID
+    objects                         : objects
+    new_generatedString             : newGenerated
+    object                          : object
+    private_user_id                 : privateUserId
+    implicit_registered_set         : implicitRegisteredSet
+    service_profile                 : serviceProfile
+    public_user_id                  : publicUserId
+    subscriber                      : subscriber
+    alias                           : alias
+    global_filter_id                : globalFilterId
+    modification                    : modification
+    global_filter                   : globalFilter
+    return_resulting_objectString   : returnResultingObject
+    name                            : name
+    type                            : type
+    value                           : value
+    xsiType                         : xsi:type
+    xsi_type_attr                   : xsiType
+    xmlns_xsi_attr                  : xmlnsXSI
+    language                        : language
+    execution                       : execution
+    synchronous                     : synchronous
+
+    spml_search_request             : searchRequest
+    spml_add_request                : addRequest
+    spml_modify_request             : modifyRequest
+    spml_delete_request             : deleteRequest
+
+    spml_delete_response            : deleteResponse
+    spml_modify_response            : modifyResponse
+    spml_add_response               : addResponse
+    spml_search_response            : searchResponse
+
+    spml_op_setoradd                : setoradd
+    spml_op_remove                  : remove
+    subscriber_public_user_id       : subscriber:PublicUserId
+    subscriber_private_user_id      : subscriber:PrivateUserId
+    subscriber_service_profile      : subscriber:ServiceProfile
+    subscriber_imp_reg_dataSet      : subscriber:ImplicitRegisteredDataSet
+
+    operation                       : operation
+    scope                           : scope
+    

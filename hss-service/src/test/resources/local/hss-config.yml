@@ -1,0 +1,123 @@
+hss:
+  
+  sipPrefix                 : "sip:"
+  E164DigitPrefix           : "+1"
+  version                   : HSS_SUBSCRIBER_v82
+  defaultSiteDomain         : ims.eng.rr.com
+  
+  url                       : "endpoint.url"
+  user                      : "endpoint.username"
+  password                  : "endpoint.password"
+  txId                      : "transaction.id"
+  methodType                : "http.method.type"
+  contentType               : "http.content.type"
+  credentialsProvider       : "http.auth.credentials-provider"
+    
+  contentTypeTextXML        : "text/xml"
+  postMethod                : "http.method.post"
+  soapActionHeader          : "header.SOAPAction"
+  endPointURL               : "http://24.24.98.197:8081/ProvisioningGateway/services/SPMLHssSubscriber82Service"
+  
+  subscriber                : "urn:siemens:names:prov:gw:HSS_SUBSCRIBER:8:2"
+  default_subscriber_ns     : "urn:siemens:names:prov:gw:HSS_SUBSCRIBER:7:0"
+  preferredAuth             : httpDigest
+  preferredDomain           : ims
+  
+  subscriptionId            : 1
+  profileType               : normal
+  adminBlocked              : false
+  defaultSCSCFRequired      : true
+  CCFPrimary                : "primaryccf.ims.rr.com"
+  CCfSecondary              : "secondaryccf.ims.rr.com"
+  
+  implicitRegSetPrefix      : irs
+  serviceProfileNamePrefix  : sp
+  sessionReleasePolicy      : deregisterNoForcedSessionRelease
+  forkingPolicy             : mixedForking
+  
+  operationCreate           : create
+  operationDelete           : delete
+  operationUpdate           : update
+  featureBlock              : BLOCK
+  hssFilter                 : hssFilter
+  hssPackage                : package
+  dPhone                    : DPHONE
+  hGroup                    : HGROUP
+  bGroup                    : BGROUP
+  validFeatureLength        : 1
+  
+  siteDomain:
+    CTX: ims.eng.rr.com
+    HOT: ims.eng.rr.com
+    HOU: ims.eng.rr.com
+    NTX: ims.eng.rr.com
+    RGV: ims.eng.rr.com
+    SAT: ims.eng.rr.com
+    STX: ims.eng.rr.com
+    SWW: ims.eng.rr.com
+    BHN: ims.eng.rr.com
+    CAR: ims.eng.rr.com
+    DV2: ims.eng.rr.com
+    
+  packages:
+    DP01: Residential
+    BC01: Commercial
+    BC04: Commercial
+    BC02: RCF
+  
+  features:
+    -
+      name        : 976
+      type        : attribute
+      actionName  : hssFilter
+      actionValue : [900COS]
+    -
+      name        : 900
+      type        : attribute
+      actionName  : hssFilter
+      actionValue : [900COS]
+    -
+      name        : INTL
+      type        : attribute
+      actionName  : hssFilter
+      actionValue : [INTLCOS]
+    -
+      name        : DP01
+      type        : featurePackage
+      actionName  : hssFilter
+      actionValue : [CID]
+    -
+      name        : DP01
+      type        : featurePackage
+      actionName  : imsServiceProfilePrefix
+      actionValue : [MUT,REG,MO]
+    -
+      name        : BC01
+      type        : featurePackage
+      actionName  : imsServiceProfilePrefix
+      actionValue : [MUT-CTS,MO-CTS,CIDBCP,REG-CTS]
+    -
+      name        : BC02
+      type        : featurePackage
+      actionName  : imsServiceProfilePrefix
+      actionValue : [MO-CTS-UNREG,MUT-CTS-UNREG]
+    -
+      name        : BC03
+      type        : featurePackage
+      actionName  : imsServiceProfilePrefix
+      actionValue : [MO-CTS-PBX,MUT-CTS-PBX,REG-CTS-PBX] 
+    -
+      name        : BC04
+      type        : featurePackage
+      actionName  : imsServiceProfilePrefix
+      actionValue : [MUT-CTS,REG-CTS,CIDBCP,MO-CTS]
+    -
+      name        : BGROUP
+      type        : featurePackage
+      actionName  : imsServiceProfilePrefix
+      actionValue : [MO-DCA011-UNREG,MUT-DCA011-UNREG]
+    -
+      name        : HGROUP
+      type        : featurePackage
+      actionName  : imsServiceProfilePrefix
+      actionValue : [MO-DCA011-UNREG,MUT-DCA011-UNREG]

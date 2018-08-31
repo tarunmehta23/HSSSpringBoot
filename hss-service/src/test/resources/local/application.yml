@@ -1,0 +1,29 @@
+server:
+  port    : 8304
+  servlet:
+    context-path  : /hss-service
+
+spring:
+  profiles:
+    active: Dev
+  jackson:
+     default-property-inclusion: NON_NULL
+
+
+logging:
+  file    : logs/hss-service.log
+  pattern:
+    file  : "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{35} - %msg%n"
+  level:
+    ROOT                          : ERROR
+    org.springframework           : ERROR
+    org.springframework.data      : ERROR
+    com.charter.provisioning.hss  : DEBUG
+    
+soap:
+  body: soapenv:Body
+  action: SOAPAction
+  header: SpmlRequest
+
+privateIdentity:
+  length: 16
